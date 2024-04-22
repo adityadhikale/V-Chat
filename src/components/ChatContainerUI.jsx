@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
+
 import {
     MainContainer,
     ChatContainer,
@@ -123,7 +125,7 @@ const ChatContainerUI = () => {
     };
 
     return (
-        <MainContainer responsive style={{ height: '600px', fontFamily: 'sans-serif' }}>
+        <MainContainer  responsive style={{ height: '600px', fontFamily: 'sans-serif' }}>
             <Sidebar position="left">
                 <h4 style={{ margin: "12px 18px" }}>Chats</h4>
                 <Search placeholder="Search..." />
