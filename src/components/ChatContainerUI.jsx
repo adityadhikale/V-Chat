@@ -20,7 +20,7 @@ const ChatContainerUI = () => {
     const [finalResponse, setFinalResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const [messages, setMessages] = useState({
-        Kai: [{ direction: 'incoming', message: 'hey', position: 'single', sender: 'Kai' }],
+        Kai: [{ direction: 'incoming', message: 'Hey', position: 'single', sender: 'Kai' }],
     });
 
     const handleConversationSelect = (conversation) => {
