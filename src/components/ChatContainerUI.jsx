@@ -33,7 +33,8 @@ const ChatContainerUI = () => {
     const generateContent = async (inputResponce) => {
         if (!selectedConversation) return;
         setLoading(true);
-        const apiKey = import.meta.env.VITE_APP_GENERATIVE_AI_API_KEY_2;  
+        // const apiKey = import.meta.env.VITE_APP_GENERATIVE_AI_API_KEY_2;  
+        const apiKey = "AIzaSyCiom6WuInXVTxjFoih3RXPmg5HCu76qnU";  
 
         if (!apiKey) {
             console.error('Missing Generative AI API Key! Please provide a valid key.');
@@ -77,7 +78,8 @@ const ChatContainerUI = () => {
         if (!selectedConversation) return;
 
         setLoading(true);
-        const apiKey = import.meta.env.VITE_APP_GENERATIVE_AI_API_KEY_3;
+        // const apiKey = import.meta.env.VITE_APP_GENERATIVE_AI_API_KEY_3;
+        const apiKey = 'AIzaSyCcpeuReqLSvUbxt1QhyF2FLBtMxQU8zIM';
 
         if (!apiKey) {
             console.error('Missing Generative AI API Key! Please provide a valid key.');
