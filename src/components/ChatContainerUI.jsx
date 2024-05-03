@@ -33,8 +33,7 @@ const ChatContainerUI = () => {
     const generateContent = async (inputResponce) => {
         if (!selectedConversation) return;
         setLoading(true);
-        const apiKey = import.meta.env.VITE_APP_GENERATIVE_AI_API_KEY_2;  
-        // const apiKey = "AIzaSyCiom6WuInXVTxjFoih3RXPmg5HCu76qnU";  
+        const apiKey = import.meta.env.VITE_APP_GENERATIVE_AI_API_KEY_2;   
 
         if (!apiKey) {
             console.error('Missing Generative AI API Key! Please provide a valid key.');
@@ -44,7 +43,8 @@ const ChatContainerUI = () => {
 
         try {
             const plainText = inputResponce.replace(/<\/?[^>]+(>|$)/g, "");
-            const newPrompt = 'chat like you are genuine user of social media app : ' +plainText;
+            // const newPrompt = 'chat like you are genuine user of social media app : ' +plainText;
+             const newPrompt =   plainText;
             console.log('Text Prompt : ', plainText);
             setPrompt(newPrompt);
 
@@ -79,7 +79,6 @@ const ChatContainerUI = () => {
 
         setLoading(true);
         const apiKey = import.meta.env.VITE_APP_GENERATIVE_AI_API_KEY_3;
-        // const apiKey = 'AIzaSyCcpeuReqLSvUbxt1QhyF2FLBtMxQU8zIM';
 
         if (!apiKey) {
             console.error('Missing Generative AI API Key! Please provide a valid key.');
@@ -110,7 +109,7 @@ const ChatContainerUI = () => {
                 ...prevMessages,
                 [selectedConversation]: [...prevMessages[selectedConversation], newMessage]
             }));
-            // generateContent(textResponse);
+            generateContent(textResponse); //--------
         } catch (error) {
             console.error(error);
             setFinalResponse('Error: Failed to generate text. Please try again.');
